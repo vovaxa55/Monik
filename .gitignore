@@ -20,3 +20,5 @@ patch.py
 update_ram.py
 update_ram_format.py
 run.sh
+keystore.properties
+keystore/

@@ -58,8 +58,9 @@ This makes it possible to:
 
 ## Download
 
-A debug APK is attached to [Releases](https://github.com/vovaxa55/Monik/releases).
-For a reproducible build from source, see below.
+A **release-signed APK (v1.1)** is attached to
+[Releases](https://github.com/vovaxa55/Monik/releases/tag/v1.1).
+Older debug builds are kept in previous releases.
 
 ## Build
 
@@ -67,22 +68,56 @@ For a reproducible build from source, see below.
 git clone https://github.com/vovaxa55/Monik.git
 cd Monik
 echo "sdk.dir=/path/to/Android/Sdk" > local.properties
-./gradlew assembleDebug
+./gradlew assembleRelease
 ```
 
-The APK is written to:
+The signed APK is written to:
 
 ```text
-app/build/outputs/apk/debug/app-debug.apk
+app/build/outputs/apk/release/app-release.apk
 ```
 
 Requirements: JDK 17, Android SDK 34, Gradle wrapper included.
 
+## Release signing
+
+Release signing is configured in `app/build.gradle.kts` and reads an optional,
+**git-ignored** `keystore.properties` file:
+
+```properties
+storeFile=keystore/monik-release.jks
+storePassword=CHANGE_ME
+keyAlias=monik
+keyPassword=CHANGE_ME
+```
+
+See `keystore.properties.example`. Generate a key once:
+
+```bash
+mkdir -p keystore
+keytool -genkeypair -v \
+  -keystore keystore/monik-release.jks -storetype PKCS12 \
+  -alias monik -keyalg RSA -keysize 4096 -validity 10000
+```
+
+If `keystore.properties` is absent, `assembleRelease` produces an unsigned APK.
+Never commit `keystore.properties` or the keystore itself.
+
 ## Install
 
 ```bash
-adb install -r app/build/outputs/apk/debug/app-debug.apk
+adb install -r app/build/outputs/apk/release/app-release.apk
 ```
+
+If a debug build is already installed, uninstall it first — debug and release
+are signed with different keys and cannot replace each other:
+
+```bash
+adb uninstall com.example.monik
+adb install -r app/build/outputs/apk/release/app-release.apk
+```
+
+Uninstalling clears the app's data (monitored list, language and intervals).
 
 Start Shizuku, grant Monik the Shizuku permission, then open the app.
 
