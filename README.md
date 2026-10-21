@@ -56,6 +56,11 @@ This makes it possible to:
 - Usage Stats permission is needed only for the **Table** tab. **Resources** works through
   Shizuku without it.
 
+## Download
+
+A debug APK is attached to [Releases](https://github.com/vovaxa55/Monik/releases).
+For a reproducible build from source, see below.
+
 ## Build
 
 ```bash
