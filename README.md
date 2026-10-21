@@ -148,10 +148,6 @@ If the home-screen icon does not open on ColorOS, use **Settings → Create
 home-screen shortcut**. Version 1.3 creates the shortcut with the `.Launcher`
 alias, which is the component ColorOS can resolve reliably.
 
-If the home-screen icon does not open on ColorOS, use **Settings → Create
-home-screen shortcut**. Version 1.3 creates the shortcut with the `.Launcher`
-alias, which is the component ColorOS can resolve reliably.
-
 ## Usage
 
 1. Start Shizuku and make sure Settings shows `Shizuku: ✅ running, permission granted`.
