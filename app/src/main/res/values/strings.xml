@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Monik</string>
+
+    <!-- Головні вкладки -->
+    <string name="tab_table">Таблиця</string>
+    <string name="tab_resources">Ресурси</string>
+    <string name="tab_settings">Налаштування</string>
+    <string name="search_hint">Пошук для моніторингу...</string>
+    <string name="btn_add">Додати</string>
+    <string name="btn_grant_usage">Дати дозвіл Usage Stats</string>
+    <string name="usage_permission_missing">ДОЗВІЛ: НЕМАЄ ❌ (НАДАЙТЕ)</string>
+    <string name="res_all">Всі (Топ 20)</string>
+    <string name="res_selected">Обрані</string>
+    <string name="btn_kill_restricted">💀 Вбити обмежені</string>
+    <string name="btn_launch_all">🚀 Запустити всі незапущені</string>
+    <string name="btn_stop_monitoring">ЗУПИНИТИ МОНІТОРИНГ</string>
+    <string name="header_app">Додаток</string>
+    <string name="header_status">Статус</string>
+    <string name="header_bucket">Buck</string>
+    <string name="header_all_processes">Всі процеси</string>
+    <string name="sort_cpu">CPU</string>
+    <string name="sort_ram">RAM</string>
+    <string name="mode_all">Всі</string>
+    <string name="mode_selected">Обрані</string>
+    <string name="res_header_format">%1$s (CPU %2$s, %3$s)</string>
+    <string name="ram_free_format">вільно: %.1fGB</string>
+
+    <!-- Налаштування -->
+    <string name="language_label">Мова додатку</string>
+    <string name="language_title">Мова додатку</string>
+    <string name="language_button">Мова: %1$s</string>
+    <string name="language_uk">Українська</string>
+    <string name="language_en">English</string>
+    <string name="shizuku_checking">Shizuku: перевірка...</string>
+    <string name="btn_open_shizuku">Відкрити Shizuku</string>
+    <string name="shizuku_not_running">Shizuku: ❌ не запущено — команди не працюватимуть</string>
+    <string name="shizuku_no_permission">Shizuku: ⚠️ запущено, але немає дозволу</string>
+    <string name="shizuku_ok">Shizuku: ✅ працює, дозвіл є</string>
+    <string name="shizuku_open_failed">Не вдалося відкрити Shizuku</string>
+    <string name="shizuku_not_installed">Shizuku не встановлено</string>
+    <string name="athena_checking">ColorOS Athena: Опитування...</string>
+    <string name="btn_uninstall">Видалити</string>
+    <string name="btn_restore">Відновити</string>
+    <string name="freezer_checking">Призупинення кешу: Опитування...</string>
+    <string name="btn_default">Default</string>
+    <string name="btn_on">Ввімк</string>
+    <string name="btn_off">Вимк</string>
+    <string name="interval_table">Інтервал \'Таблиці\' (мс):</string>
+    <string name="interval_resources">Інтервал \'Ресурсів\' (мс):</string>
+    <string name="btn_save_intervals">Зберегти інтервали</string>
+    <string name="btn_create_shortcut">Створити ярлик на робочий стіл</string>
+
+    <!-- Діалоги -->
+    <string name="confirm_restrict_title">Обмежити %1$s?</string>
+    <string name="confirm_restrict_message">Буде прибрано з whitelist оптимізації батареї, встановлено AppOps ignore, bucket restricted і force-stop.</string>
+    <string name="confirm_restrict_positive">Обмежити</string>
+    <string name="confirm_allow_title">Дозволити %1$s?</string>
+    <string name="confirm_allow_message">Буде встановлено AppOps allow, bucket active, застосунок додано в whitelist оптимізації батареї та знято стан stopped.</string>
+    <string name="confirm_allow_positive">Дозволити</string>
+    <string name="cancel">Скасувати</string>
+
+    <!-- Налаштування: тости -->
+    <string name="athena_uninstalled_toast">Athena видалена</string>
+    <string name="athena_restored_toast">Athena відновлена</string>
+    <string name="freezer_default_toast">Призупинення кешу: Default</string>
+    <string name="freezer_on_toast">Призупинення кешу: Ввімкнено</string>
+    <string name="freezer_off_toast">Призупинення кешу: Вимкнено</string>
+    <string name="intervals_saved">Інтервали збережено!</string>
+    <string name="input_error">Помилка вводу</string>
+    <string name="shortcut_requested">Запит на створення ярлика надіслано!</string>
+    <string name="shortcut_failed">Не вдалося запросити створення ярлика</string>
+    <string name="shortcut_unsupported">Ваш лаунчер не підтримує створення ярликів</string>
+    <string name="shortcut_android8">Потрібен Android 8.0 або новіший</string>
+
+    <!-- AppManager: тости -->
+    <string name="toast_shizuku_no_command">Shizuku не запущено — команда не виконана</string>
+    <string name="toast_no_shizuku_access">Shizuku не запущено — немає доступу до команд</string>
+    <string name="toast_select_from_list">Оберіть зі списку!</string>
+    <string name="toast_already_added">Вже в списку</string>
+    <string name="toast_added">Додано: %1$s</string>
+    <string name="toast_launched_bg">Запущено в фоні</string>
+    <string name="toast_restricted">🚫 Обмежено: %1$s\nБакет: %2$s • WL: %3$s</string>
+    <string name="toast_allowed">✅ Дозволено: %1$s\nБакет: %2$s • WL: %3$s</string>
+    <string name="toast_self_not_killed">(себе не вбиваю)</string>
+    <string name="toast_bucket_override">⚠ Ефективний бакет не 45 — ColorOS може перевизначати</string>
+    <string name="toast_wl_added">🔋 Додано в whitelist: %1$s</string>
+    <string name="toast_wl_removed">🔋 Прибрано з whitelist: %1$s</string>
+    <string name="toast_unstop">↩️ unstop: %1$s</string>
+    <string name="toast_killed">🥾 Процес вбито: %1$s</string>
+    <string name="toast_launched_count">Запущено %1$d додатків</string>
+    <string name="toast_killed_count">💀 Вбито %1$d обмежених додатків</string>
+
+    <!-- Стан у налаштуваннях -->
+    <string name="athena_status">ColorOS Athena: %1$s</string>
+    <string name="athena_installed">Встановлено ✅</string>
+    <string name="athena_removed">Видалено ❌</string>
+    <string name="freezer_status">Призупинення кешу: %1$s</string>
+    <string name="freezer_not_working">Не працює (Вимк)</string>
+    <string name="freezer_working">Працює (Ввімкнено)</string>
+    <string name="freezer_default">За замовчуванням (Працює)</string>
+
+    <!-- Рядки застосунків -->
+    <string name="ram_killed">RAM: ВБИТО</string>
+    <string name="ram_pid">RAM: PID %1$s</string>
+    <string name="state_waiting">ОЧІКУВАННЯ...</string>
+    <string name="state_on_screen">НА ЕКРАНІ\n(з %1$s)</string>
+    <string name="state_minimized">ЗГОРНУТО\n(з %1$s)</string>
+    <string name="state_service_active">СЕРВІС АКТИВНИЙ\n(з %1$s)</string>
+    <string name="state_ui_hidden">ІНТЕРФЕЙС ПРИХОВАНО\n(з %1$s)</string>
+    <string name="bg_state_restricted">Фон: 🚫</string>
+    <string name="bg_state_allowed">Фон: ✅</string>
+    <string name="sleep_state_restricted">Сон: 🚫</string>
+    <string name="sleep_state_allowed">Сон: ✅</string>
+    <string name="wl_state_denied">WL: 🚫</string>
+    <string name="wl_state_user">WL: ✅</string>
+    <string name="wl_state_sys">WL: ✅ sys</string>
+    <string name="bucket_value">Bucket: %1$s</string>
+    <string name="process_not_running">процес не запущено</string>
+    <string name="cpu_ram_format">CPU %1$.1f%% · RAM %2$d MB</string>
+</resources>

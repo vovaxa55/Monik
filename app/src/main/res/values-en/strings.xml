@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Monik</string>
+
+    <!-- Main tabs -->
+    <string name="tab_table">Table</string>
+    <string name="tab_resources">Resources</string>
+    <string name="tab_settings">Settings</string>
+    <string name="search_hint">Search to monitor...</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_grant_usage">Grant Usage Stats permission</string>
+    <string name="usage_permission_missing">PERMISSION: MISSING ❌ (GRANT IT)</string>
+    <string name="res_all">All (Top 20)</string>
+    <string name="res_selected">Selected</string>
+    <string name="btn_kill_restricted">💀 Kill restricted</string>
+    <string name="btn_launch_all">🚀 Launch all unlaunched</string>
+    <string name="btn_stop_monitoring">STOP MONITORING</string>
+    <string name="header_app">App</string>
+    <string name="header_status">Status</string>
+    <string name="header_bucket">Buck</string>
+    <string name="header_all_processes">All processes</string>
+    <string name="sort_cpu">CPU</string>
+    <string name="sort_ram">RAM</string>
+    <string name="mode_all">All</string>
+    <string name="mode_selected">Selected</string>
+    <string name="res_header_format">%1$s (CPU %2$s, %3$s)</string>
+    <string name="ram_free_format">free: %.1fGB</string>
+
+    <!-- Settings -->
+    <string name="language_label">App language</string>
+    <string name="language_title">App language</string>
+    <string name="language_button">Language: %1$s</string>
+    <string name="language_uk">Українська</string>
+    <string name="language_en">English</string>
+    <string name="shizuku_checking">Shizuku: checking...</string>
+    <string name="btn_open_shizuku">Open Shizuku</string>
+    <string name="shizuku_not_running">Shizuku: ❌ not running — commands will not work</string>
+    <string name="shizuku_no_permission">Shizuku: ⚠️ running, but no permission</string>
+    <string name="shizuku_ok">Shizuku: ✅ running, permission granted</string>
+    <string name="shizuku_open_failed">Could not open Shizuku</string>
+    <string name="shizuku_not_installed">Shizuku is not installed</string>
+    <string name="athena_checking">ColorOS Athena: checking...</string>
+    <string name="btn_uninstall">Uninstall</string>
+    <string name="btn_restore">Restore</string>
+    <string name="freezer_checking">Cached app freezer: checking...</string>
+    <string name="btn_default">Default</string>
+    <string name="btn_on">On</string>
+    <string name="btn_off">Off</string>
+    <string name="interval_table">Table interval (ms):</string>
+    <string name="interval_resources">Resources interval (ms):</string>
+    <string name="btn_save_intervals">Save intervals</string>
+    <string name="btn_create_shortcut">Create home screen shortcut</string>
+
+    <!-- Dialogs -->
+    <string name="confirm_restrict_title">Restrict %1$s?</string>
+    <string name="confirm_restrict_message">The app will be removed from the battery optimization whitelist, AppOps set to ignore, bucket set to restricted, and force-stopped.</string>
+    <string name="confirm_restrict_positive">Restrict</string>
+    <string name="confirm_allow_title">Allow %1$s?</string>
+    <string name="confirm_allow_message">AppOps will be set to allow, bucket to active, the app added to the battery optimization whitelist, and the stopped state cleared.</string>
+    <string name="confirm_allow_positive">Allow</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Settings toasts -->
+    <string name="athena_uninstalled_toast">Athena uninstalled</string>
+    <string name="athena_restored_toast">Athena restored</string>
+    <string name="freezer_default_toast">Cached app freezer: Default</string>
+    <string name="freezer_on_toast">Cached app freezer: On</string>
+    <string name="freezer_off_toast">Cached app freezer: Off</string>
+    <string name="intervals_saved">Intervals saved!</string>
+    <string name="input_error">Input error</string>
+    <string name="shortcut_requested">Shortcut request sent!</string>
+    <string name="shortcut_failed">Could not request shortcut creation</string>
+    <string name="shortcut_unsupported">Your launcher does not support shortcuts</string>
+    <string name="shortcut_android8">Android 8.0 or newer is required</string>
+
+    <!-- AppManager toasts -->
+    <string name="toast_shizuku_no_command">Shizuku is not running — command not executed</string>
+    <string name="toast_no_shizuku_access">Shizuku is not running — no access to commands</string>
+    <string name="toast_select_from_list">Select from the list!</string>
+    <string name="toast_already_added">Already in the list</string>
+    <string name="toast_added">Added: %1$s</string>
+    <string name="toast_launched_bg">Launched in background</string>
+    <string name="toast_restricted">🚫 Restricted: %1$s\nBucket: %2$s • WL: %3$s</string>
+    <string name="toast_allowed">✅ Allowed: %1$s\nBucket: %2$s • WL: %3$s</string>
+    <string name="toast_self_not_killed">(not killing myself)</string>
+    <string name="toast_bucket_override">⚠ Effective bucket is not 45 — ColorOS may override</string>
+    <string name="toast_wl_added">🔋 Added to whitelist: %1$s</string>
+    <string name="toast_wl_removed">🔋 Removed from whitelist: %1$s</string>
+    <string name="toast_unstop">↩️ unstop: %1$s</string>
+    <string name="toast_killed">🥾 Process killed: %1$s</string>
+    <string name="toast_launched_count">Launched %1$d apps</string>
+    <string name="toast_killed_count">💀 Killed %1$d restricted apps</string>
+
+    <!-- Settings state -->
+    <string name="athena_status">ColorOS Athena: %1$s</string>
+    <string name="athena_installed">Installed ✅</string>
+    <string name="athena_removed">Removed ❌</string>
+    <string name="freezer_status">Cached app freezer: %1$s</string>
+    <string name="freezer_not_working">Not working (Off)</string>
+    <string name="freezer_working">Working (On)</string>
+    <string name="freezer_default">Default (Working)</string>
+
+    <!-- App rows -->
+    <string name="ram_killed">RAM: KILLED</string>
+    <string name="ram_pid">RAM: PID %1$s</string>
+    <string name="state_waiting">WAITING...</string>
+    <string name="state_on_screen">ON SCREEN\n(since %1$s)</string>
+    <string name="state_minimized">MINIMIZED\n(since %1$s)</string>
+    <string name="state_service_active">SERVICE ACTIVE\n(since %1$s)</string>
+    <string name="state_ui_hidden">UI HIDDEN\n(since %1$s)</string>
+    <string name="bg_state_restricted">Background: 🚫</string>
+    <string name="bg_state_allowed">Background: ✅</string>
+    <string name="sleep_state_restricted">Sleep: 🚫</string>
+    <string name="sleep_state_allowed">Sleep: ✅</string>
+    <string name="wl_state_denied">WL: 🚫</string>
+    <string name="wl_state_user">WL: ✅</string>
+    <string name="wl_state_sys">WL: ✅ sys</string>
+    <string name="bucket_value">Bucket: %1$s</string>
+    <string name="process_not_running">process not running</string>
+    <string name="cpu_ram_format">CPU %1$.1f%% · RAM %2$d MB</string>
+</resources>

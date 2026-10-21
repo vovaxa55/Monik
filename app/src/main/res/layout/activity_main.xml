@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvPermissionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnOpenSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_grant_usage"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/addAppContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteApps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search_hint"
+            android:completionThreshold="1"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnAddApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="3">
+
+        <Button android:id="@+id/btnMonitorMulti" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/tab_table" android:textSize="10sp" />
+        <Button android:id="@+id/btnMonitorResources" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/tab_resources" android:textSize="10sp" />
+        <Button android:id="@+id/btnSettingsTab" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/tab_settings" android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resourceSubTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:weightSum="3">
+        <Button android:id="@+id/btnResAll" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/res_all" android:textSize="10sp" />
+        <Button android:id="@+id/btnResSelected" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/res_selected" android:textSize="10sp" />
+        <Button android:id="@+id/btnKillRestricted" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/btn_kill_restricted" android:textSize="10sp" android:textColor="#FF0000" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLaunchAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_launch_all"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_stop_monitoring"
+        android:textColor="#FF0000"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/tableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/header_app" android:textStyle="bold" />
+        <TextView android:layout_width="85dp" android:layout_height="wrap_content" android:gravity="center" android:text="@string/header_status" android:textStyle="bold" />
+        <TextView android:layout_width="35dp" android:layout_height="wrap_content" android:gravity="center" android:text="@string/header_bucket" android:textStyle="bold" />
+        <Space android:layout_width="64dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resourceHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <TextView android:id="@+id/tvTotalCpu" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/header_all_processes" android:textStyle="bold" />
+        <TextView android:id="@+id/tvSortCpu" android:layout_width="60dp" android:layout_height="wrap_content" android:gravity="center" android:text="CPU ▼" android:textStyle="bold" android:textColor="#2563EB" android:clickable="true" />
+        <TextView android:id="@+id/tvSortRam" android:layout_width="80dp" android:layout_height="wrap_content" android:gravity="center" android:text="RAM ▼" android:textStyle="bold" android:textColor="#2563EB" android:clickable="true" />
+        <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ListView android:id="@+id/monitorListView" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ListView android:id="@+id/resourceListView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" />
+
+    <LinearLayout android:id="@+id/settingsContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone" android:paddingTop="16dp">
+
+        <TextView android:id="@+id/tvLanguageLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/language_label" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <Button android:id="@+id/btnLanguage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/language_uk" android:layout_marginBottom="16dp"/>
+
+        <TextView android:id="@+id/tvShizukuStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/shizuku_checking" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <Button android:id="@+id/btnOpenShizuku" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_open_shizuku" android:layout_marginBottom="16dp"/>
+
+        <TextView android:id="@+id/tvAthenaStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/athena_checking" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btnAthenaUninstall" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/btn_uninstall" />
+            <Button android:id="@+id/btnAthenaInstall" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/btn_restore" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvFreezerStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/freezer_checking" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btnFreezerDef" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/btn_default" />
+            <Button android:id="@+id/btnFreezerOn" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/btn_on" />
+            <Button android:id="@+id/btnFreezerOff" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/btn_off" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/interval_table" android:textStyle="bold" />
+        <EditText android:id="@+id/etIntervalTable" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="5000" android:layout_marginBottom="8dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/interval_resources" android:textStyle="bold" />
+        <EditText android:id="@+id/etIntervalResource" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:text="10000" />
+
+        <Button android:id="@+id/btnSaveIntervals" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_save_intervals" android:layout_marginBottom="24dp"/>
+
+        <Button android:id="@+id/btnCreateShortcut" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_create_shortcut" android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+</LinearLayout>
