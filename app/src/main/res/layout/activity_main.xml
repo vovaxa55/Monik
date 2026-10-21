@@ -123,6 +123,8 @@
         <TextView android:id="@+id/tvLanguageLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/language_label" android:textStyle="bold" android:layout_marginBottom="4dp"/>
         <Button android:id="@+id/btnLanguage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/language_uk" android:layout_marginBottom="16dp"/>
 
+        <Button android:id="@+id/btnCreateShortcut" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_create_shortcut" android:layout_marginBottom="8dp"/>
+
         <TextView android:id="@+id/tvShizukuStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/shizuku_checking" android:textStyle="bold" android:layout_marginBottom="4dp"/>
         <Button android:id="@+id/btnOpenShizuku" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_open_shizuku" android:layout_marginBottom="16dp"/>
 
@@ -147,6 +149,5 @@
 
         <Button android:id="@+id/btnSaveIntervals" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_save_intervals" android:layout_marginBottom="24dp"/>
 
-        <Button android:id="@+id/btnCreateShortcut" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_create_shortcut" android:layout_marginBottom="8dp"/>
     </LinearLayout>
 </LinearLayout>

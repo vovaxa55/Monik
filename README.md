@@ -64,9 +64,26 @@ This makes it possible to:
 
 ## Download
 
-A **release-signed APK (v1.1)** is attached to
-[Releases](https://github.com/vovaxa55/Monik/releases/tag/v1.1).
-Older debug builds are kept in previous releases.
+A **release-signed APK (v1.3)** is attached to
+[Releases](https://github.com/vovaxa55/Monik/releases/tag/v1.3).
+Older builds are kept in previous releases.
+
+## Changelog
+
+### 1.3
+
+- Fixed the launcher entry on ColorOS: the app is now started through a
+  dedicated `activity-alias` (`.Launcher`) instead of the activity that the
+  package installer could leave unresolvable after a sideload.
+- The **Create home-screen shortcut** action now points to the alias, so a new
+  shortcut opens correctly. The button was moved to the top of Settings.
+- `versionCode 4`, `versionName 1.3`.
+
+### 1.1
+
+- Release signing with a dedicated key.
+- Ukrainian and English UI.
+- ColorOS bucket-override warning and release documentation.
 
 ## Build
 
@@ -126,6 +143,14 @@ adb install -r app/build/outputs/apk/release/app-release.apk
 Uninstalling clears the app's data (monitored list, language and intervals).
 
 Start Shizuku, grant Monik the Shizuku permission, then open the app.
+
+If the home-screen icon does not open on ColorOS, use **Settings → Create
+home-screen shortcut**. Version 1.3 creates the shortcut with the `.Launcher`
+alias, which is the component ColorOS can resolve reliably.
+
+If the home-screen icon does not open on ColorOS, use **Settings → Create
+home-screen shortcut**. Version 1.3 creates the shortcut with the `.Launcher`
+alias, which is the component ColorOS can resolve reliably.
 
 ## Usage
 

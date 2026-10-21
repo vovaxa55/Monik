@@ -398,11 +398,12 @@ public class MainActivity extends AppCompatActivity {
         etIntervalResource.setText(String.valueOf(resourceInterval));
     }
 
-        private void createHomeScreenShortcut() {
+    private void createHomeScreenShortcut() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
             if (shortcutManager != null && shortcutManager.isRequestPinShortcutSupported()) {
-                Intent shortcutIntent = new Intent(this, MainActivity.class);
+                Intent shortcutIntent = new Intent();
+                shortcutIntent.setClassName(this, "com.example.monik.Launcher");
                 shortcutIntent.setAction(Intent.ACTION_MAIN);
                 shortcutIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 
