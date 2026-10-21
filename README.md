@@ -32,6 +32,12 @@ This makes it possible to:
 - **restrict unwanted apps** so they do not run or restart in the background;
 - diagnose why a “restricted” app still runs, or why an “allowed” app is still killed.
 
+## Screenshots
+
+| Settings | Resources |
+|---|---|
+| ![Settings](docs/screenshots/01-settings.png) | ![Resources](docs/screenshots/02-resources.png) |
+
 ## Features
 
 - Per-app indicators for Background, Sleep, WL and Bucket, with green/red status.
